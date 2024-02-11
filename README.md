@@ -7,18 +7,18 @@ Before running this installer, be sure you have set up up your internet connecti
 ## Usage
 Run this command on a host that can make a SSH connection to your Unifi OS.
 ```bash
-sh -c "$(curl -sSf https://raw.githubusercontent.com/jeroenzwart/udm-iptv-autoinstaller/main/installer.sh | sh -s -- -h {HOST} -u {USER} -p {PASSWORD} {CONFIG})"
+curl -sSf https://raw.githubusercontent.com/jeroenzwart/udm-iptv-autoinstaller/main/installer.sh | bash -s -- -h {HOST} -u {USER} -p {PASSWORD} {CONFIG}
 ```
 | Tag          | Explantion                               | Example            |
 |--------------|------------------------------------------|--------------------|
 | *{HOST}*     | The IP or hostname of your Unifi device  | 192.168.1.1        | 
 | *{USER}*     | The user set in Unifi Controller for SSH | admin              |
 | *{PASSWORD}* | The password set in the Unifi Controller | verysecretpassword |
-| *{CONFIG}*   | The configuration file                   | ./KPN.conf         |
+| *{CONFIG}*   | The configuration file                   | ./MyProvider.conf  |
 
 So like this;
 ```bash
-sh -c "$(curl -sSf https://raw.githubusercontent.com/jeroenzwart/udm-iptv-autoinstaller/main/installer.sh | sh -s -- -h 192.168.1.1 -u admin -p 's3cr3T!' './MyProvider.conf')"
+curl -sSf https://raw.githubusercontent.com/jeroenzwart/udm-iptv-autoinstaller/main/installer.sh | bash -s -- -h 192.168.1.1 -u admin -p 'verysecretpassword' ./MyProvider.conf
 ```
 
 ## Configuration
